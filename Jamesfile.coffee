@@ -1,6 +1,5 @@
 james  = require 'james'
 coffee = require './index'
-Q      = require 'q'
 
 module.exports = tasks = {}
 
