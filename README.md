@@ -4,7 +4,7 @@ CoffeeScript to JavaScript transformer for [James.js](https://github.com/leonida
 
 ```coffeescript
 james  = require 'james'
-coffee = require('james-coffee').createStream
+coffee = require 'james-coffee'
 
 module.exports = tasks = {}
 
@@ -12,8 +12,8 @@ tasks.default = ->
   james.list 'src/**/*.coffee', (files) ->
     files.forEach (file) ->
       james.read(file)
-        .pipe(coffee bare: true)
-        .pipe james.write file.replace 'src', 'dist'
+        .transform(coffee bare: true)
+        .write file.replace('src', 'dist').replace '.coffee', '.js'
 
 ```
 

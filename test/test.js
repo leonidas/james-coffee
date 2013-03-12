@@ -1,6 +1,6 @@
 var assert = require('assert'),
     stream = require('readable-stream'),
-    coffee = require('../index.js').createStream;
+    coffee = require('../index.js');
 
 describe('#createStream', function() {
 
