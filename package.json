@@ -18,6 +18,6 @@
   "license": "MIT",
   "dependencies": {
     "coffee-script": "~1.6.1",
-    "james": "0.0.6"
+    "james": "~0.1.0"
   }
 }
