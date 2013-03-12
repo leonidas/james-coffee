@@ -1,15 +1,9 @@
-(function() {
-  var coffee, james;
+var james  = require('james'),
+    coffee = require('coffee-script');
 
-  james = require('james');
-
-  coffee = require('coffee-script');
-
-  module.exports = james.transformer(function(file) {
-    return {
-      content: coffee.compile(file.content),
-      name: file.name.replace(/.coffee$/, '.js')
-    };
+exports.createStream = function(options) {
+  options = options || {};
+  return james.createStream(function(file, callback) {
+    callback(coffee.compile(file, options));
   });
-
-}).call(this);
+}
