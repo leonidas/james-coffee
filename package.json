@@ -17,7 +17,8 @@
   "author": "Jarno Keskikangas",
   "license": "MIT",
   "dependencies": {
-    "james": "~0.1.2"
+    "james": "~0.1.2",
+    "coffee-script": "1.6.2"
   },
   "devDependencies": {
     "readable-stream": "~1.0.2",
